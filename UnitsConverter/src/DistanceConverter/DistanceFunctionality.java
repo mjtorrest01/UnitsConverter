@@ -3,45 +3,44 @@ package DistanceConverter;
 import javax.swing.JOptionPane;
 
 public class DistanceFunctionality {
+
+    double lightYearsToMiles = 5.879e+12;
+    double lightYearsToKilometers = 9.461e+12; 
+    double kilometersToMilles = 1.609344;
+    double kilometersToMeters = 1000;
+    double metersToMiles = 1609.34;
+    double metersToFeet = 3.2808399;
+    double metersToInches = 39.3700787;
+    double metersToCentimeters = 100;
+    double feetToInches = 12;
+    double feerToCentimeters = 30.48;
+    double inchesToCentimeters = 2.54;
     
     DistanceOperation converter = new DistanceOperation();
 
     public void convertMeasures (double measure) {
 
         String distanceMeasures = (JOptionPane.showInputDialog(null, "Elija la convercion a realizar", 
-                                                                        "Converciones de Distancia", JOptionPane.QUESTION_MESSAGE, null,
-                                                                        new Object[] {  "Años Luz a Millas",
-                                                                                        "Años Luz a Kilometros",
-                                                                                        "Kilometros a Años Luz",
-                                                                                        "Kilometros a Millas",
-                                                                                        "Kilometros a Metros",
-                                                                                        "Metros a Millas",
-                                                                                        "Metros a Kilometros",
-                                                                                        "Metros a Pies",
-                                                                                        "Metros a Pulgadas",
-                                                                                        "Metros a Centimetros",
-                                                                                        "Pies a Metros",
-                                                                                        "Pies a Pulgadas",
-                                                                                        "Pies a Centimetros",
-                                                                                        "Pulgadas a Metros",
-                                                                                        "Pulgadas a Pies",
-                                                                                        "Pulgadas a Centimetros",
-                                                                                        "Centimetros a Metros",
-                                                                                        "Centimetros a Pulgadas",
-                                                                                        "Centimetros a Pies",},
-                                                                                        "Seleccion")).toString();
-
-        double lightYearsToMiles = 5.879e+12;
-        double lightYearsToKilometers = 9.461e+12; 
-        double kilometersToMilles = 1.609344;
-        double kilometersToMeters = 1000;
-        double metersToMiles = 1609.34;
-        double metersToFeet = 3.2808399;
-        double metersToInches = 39.3700787;
-        double metersToCentimeters = 100;
-        double feetToInches = 12;
-        double feerToCentimeters = 30.48;
-        double inchesToCentimeters = 2.54;
+        "Converciones de Distancia", JOptionPane.QUESTION_MESSAGE, null,
+        new Object[] {  "Años Luz a Millas",
+                        "Años Luz a Kilometros",
+                        "Kilometros a Años Luz",
+                        "Kilometros a Millas",
+                        "Kilometros a Metros",
+                        "Metros a Millas",
+                        "Metros a Kilometros",
+                        "Metros a Pies",
+                        "Metros a Pulgadas",
+                        "Metros a Centimetros",
+                        "Pies a Metros",
+                        "Pies a Pulgadas",
+                        "Pies a Centimetros",
+                        "Pulgadas a Metros",
+                        "Pulgadas a Pies",
+                        "Pulgadas a Centimetros",
+                        "Centimetros a Metros",
+                        "Centimetros a Pulgadas",
+                        "Centimetros a Pies" }, "Seleccion")).toString();
 
         switch (distanceMeasures) {
             case "Años Luz a Millas":
