@@ -32,12 +32,33 @@ public class AppUnitsConverter {
                     if (moneyValue(valueQuantity) & (valueQuantity != null) & valueQuantity.matches("[0-9]\\d*(\\.\\d+)?$")) {
                         double myValueAmount = Double.parseDouble(valueQuantity);
                         currency.covertCurrency(myValueAmount);
-                        int selection1 = JOptionPane.showConfirmDialog(null, "¿Desea Reakizar Otra Conversion?");
+                        int selection1 = JOptionPane.showConfirmDialog(null, "¿Desea Realizar Otra Conversion?");
                             if (JOptionPane.OK_OPTION == selection1) {
                                 System.out.println("OK_OPTION Selecionado");
                             } else {
                                 key = false;
                                 JOptionPane.showMessageDialog(null, "Cerrando APP");
+                                break;
+                            }
+                            break;
+                    } else {
+                        System.out.println("Solo Debes Introducir Valores Numericos");
+                        JOptionPane.showMessageDialog(null, "Valor Introducidos no Permitidos, Vuleva a Intentar");
+                        break;
+                    }
+                case "Conversor de Distancias":
+                    String measurementDistance = JOptionPane.showInputDialog("Ingrese la Distancia a Convertir");
+
+                    if (valueDistance(measurementDistance) & (measurementDistance != null) & measurementDistance.matches("[0-9]\\d*(\\.\\d+)?$")) {
+                        double myDistanceMeasure = Double.parseDouble(measurementDistance);
+                        distance.convertMeasures(myDistanceMeasure);
+                        int selection2 = JOptionPane.showConfirmDialog(null, "¿Desea Realizar Otra Conversion?");
+                            if (JOptionPane.OK_OPTION == selection2) {
+                                System.out.println("OK_OPTION Selecionado");
+                            } else {
+                                key = false;
+                                JOptionPane.showMessageDialog(null, "Cerrando APP");
+                                break;
                             }
                             break;
                     } else {
@@ -50,6 +71,10 @@ public class AppUnitsConverter {
     }
 
     private static boolean moneyValue(String valueQuantity) {
+        return true;
+    }
+
+    private static boolean valueDistance(String measurementDistance) {
         return true;
     }
 }
