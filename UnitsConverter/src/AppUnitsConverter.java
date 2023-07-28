@@ -6,6 +6,7 @@ import javax.swing.UIManager;
 
 import CurrencyConverter.CurrencyFunctionality;
 import DistanceConverter.DistanceFunctionality;
+import SpeedConverter.SpeedFunctionality;
 
 public class AppUnitsConverter {
     public static void main(String[] args) {
@@ -15,6 +16,7 @@ public class AppUnitsConverter {
 
         CurrencyFunctionality currency = new CurrencyFunctionality();
         DistanceFunctionality distance = new DistanceFunctionality();
+        SpeedFunctionality Speed = new SpeedFunctionality();
 
         boolean key = true;
 
@@ -23,7 +25,8 @@ public class AppUnitsConverter {
             JOptionPane.QUESTION_MESSAGE, null,
             new Object[]{
                 "Conversor de Divisas",
-                "Conversor de Distancias" }, "Seleccione el Tipo de Conversor")).toString();
+                "Conversor de Distancias", 
+                "Conversor de Velocidad" }, "Seleccione el Tipo de Conversor")).toString();
 
             switch (conversionOption) {
                 case "Conversor de Divisas":
@@ -66,6 +69,26 @@ public class AppUnitsConverter {
                         JOptionPane.showMessageDialog(null, "Valor Introducidos no Permitidos, Vuleva a Intentar");
                         break;
                     }
+                case "Conversor de Velocidad":
+                    String recordedSpeed = JOptionPane.showInputDialog("Digite la Velocidad a convertir");
+
+                    if (valueSpeed(recordedSpeed) & (recordedSpeed != null) & (recordedSpeed.matches("[0-9]\\d*(\\.\\d+)?$"))) {
+                        double myRegisteredSpeed = Double.parseDouble(recordedSpeed);
+                        Speed.velocityConverter(myRegisteredSpeed);
+                        int selection3 = JOptionPane.showConfirmDialog(null, "¿Desea Realizar Otra Conversion?");
+                            if (JOptionPane.OK_OPTION == selection3) {
+                                System.out.println("OK_OPTION Selecionado");
+                            } else {
+                                key = false;
+                                JOptionPane.showMessageDialog(null, "Cerrando APP");
+                                break;
+                            }
+                            break;
+                    } else {
+                        System.out.println("Solo Debes Introducir Valores Numericos");
+                        JOptionPane.showMessageDialog(null, "Valor Introducidos no Permitidos, Vuleva a Intentar");
+                        break;
+                    }
             }
         }
     }
@@ -75,6 +98,10 @@ public class AppUnitsConverter {
     }
 
     private static boolean valueDistance(String measurementDistance) {
+        return true;
+    }
+    
+    private static boolean valueSpeed(String recordedSpeed) {
         return true;
     }
 }
