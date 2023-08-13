@@ -4,22 +4,24 @@ import javax.swing.JOptionPane;
 
 public class CurrencyFunctionality {
     
+    // actualizado 08/13/2023 
+
     double balboaToUSD = 1.00;
     double usdToBalboa = 1.00;
-    double balboaToCAD = 1.37;
-    double cadToBalboa = 0.73;
-    double balboaToMXN = 18.60;
-    double mxnToBalboa = 0.054;
-    double balboaToEUR = 0.93;
-    double eurToBalboa = 1.03;
-    double balboaToGBP = 0.82;
-    double gbpToBalboa = 1.22;
-    double balboaToJPY = 132.44;
-    double jpyToBalboa = 0.0076;
-    double balboaToARS = 205.01;
-    double arsToBalboa = 0.0049;
-    double balboaToKRW = 1294.66;
-    double krwToBalboa = 0.00077;
+    double balboaToCAD = 1.34;
+    double cadToBalboa = 0.75;
+    double balboaToMXN = 16.97;
+    double mxnToBalboa = 0.059;
+    double balboaToEUR = 0.91;
+    double eurToBalboa = 1.10;
+    double balboaToGBP = 0.79;
+    double gbpToBalboa = 1.27;
+    double balboaToJPY = 145.00;
+    double jpyToBalboa = 0.0069;
+    double balboaToARS = 286.12;
+    double arsToBalboa = 0.0035;
+    double balboaToKRW = 1326.00;
+    double krwToBalboa = 0.00075;
 
     CurrencyOperation conversion = new CurrencyOperation();
 
@@ -49,49 +51,49 @@ public class CurrencyFunctionality {
                 conversion.convertCurrency(amount, "Balboa", balboaToUSD, "Dolares Americanos", "$");
                 break;
             case "Dolar Americano a Balboa":
-                conversion.convertCurrency(amount, "Balboa", usdToBalboa, "Balboas", "B/.");
+                conversion.convertCurrency(amount, "Dolares Americanos", usdToBalboa, "Balboas", "B/.");
                 break;
             case "Balboa a Dolar Canadience":
-                conversion.convertCurrency(amount, "Balboa", balboaToCAD, "Dolares Americanos", "$");
+                conversion.convertCurrency(amount, "Balboa", balboaToCAD, "Dolar Canadience", "CAD");
                 break;
             case "Dolar Canadience a Balboa":
-                conversion.convertCurrency(amount, "Balboa", cadToBalboa, "Balboas", "B/.");
+                conversion.convertCurrency(amount, "Dolar Canadience", cadToBalboa, "Balboas", "B/.");
                 break;
             case "Balboa a Pesos Mexicanos":
-                conversion.convertCurrency(amount, "Balboa", balboaToMXN, "Dolares Americanos", "$");
+                conversion.convertCurrency(amount, "Balboa", balboaToMXN, "Pesos Mexicanos", "MXN$");
                 break;
             case "Pesos Mexicanos a Balboa":
-                conversion.convertCurrency(amount, "Balboa", mxnToBalboa, "Balboas", "B/.");
+                conversion.convertCurrency(amount, "Pesos Mexicanos", mxnToBalboa, "Balboas", "B/.");
                 break;
             case "Balboa a Euros":
-                conversion.convertCurrency(amount, "Balboa", balboaToEUR, "Dolares Americanos", "$");
+                conversion.convertCurrency(amount, "Balboa", balboaToEUR, "Euros", "\u20AC");
                 break;
             case "Euros a Balboa":
-                conversion.convertCurrency(amount, "Balboa", eurToBalboa, "Balboas", "B/.");
+                conversion.convertCurrency(amount, "Euros", eurToBalboa, "Balboas", "B/.");
                 break;
             case "Balboa a Libras Esterlinas":
-                conversion.convertCurrency(amount, "Balboa", balboaToGBP, "Dolares Americanos", "$");
+                conversion.convertCurrency(amount, "Balboa", balboaToGBP, "Libras Esterlinas", "\u00A3");
                 break;
             case "Libras Esterlinas a Balboa":
-                conversion.convertCurrency(amount, "Balboa", gbpToBalboa, "Balboas", "B/.");
+                conversion.convertCurrency(amount, "Libras Esterlinas", gbpToBalboa, "Balboa", "B/.");
                 break;
             case "Balboa a Yen":
-                conversion.convertCurrency(amount, "Balboa", balboaToJPY, "Dolares Americanos", "$");
+                conversion.convertCurrency(amount, "Balboa", balboaToJPY, "Yenes Japoneses", "\u00A5");
                 break;
             case "Yen a Balboa":
-                conversion.convertCurrency(amount, "Balboa", jpyToBalboa, "Balboas", "B/.");
+                conversion.convertCurrency(amount, "Yenes Japoneses", jpyToBalboa, "Balboas", "B/.");
                 break;
             case "Balboa a Pesos Argentinos":
-                conversion.convertCurrency(amount, "Balboa", balboaToARS, "Dolares Americanos", "$");
+                conversion.convertCurrency(amount, "Balboa", balboaToARS, "Pesos Argentinos", "ARG$");
                 break;
             case "Pesos Argentinos a Balboa":
-                conversion.convertCurrency(amount, "Balboa", arsToBalboa, "Balboas", "B/.");
+                conversion.convertCurrency(amount, "Pesos Argentinos", arsToBalboa, "Balboas", "B/.");
                 break;
             case "Balboa a Won Sur Coreano":
-                conversion.convertCurrency(amount, "Balboa", balboaToKRW, "Dolares Americanos", "$");
+                conversion.convertCurrency(amount, "Balboa", balboaToKRW, "Won Sur Coreanos", "w\u014Fn");
                 break;
             case "Won Sur Coreano a Balboa":
-                conversion.convertCurrency(amount, "Balboa", krwToBalboa, "Balboas", "B/.");
+                conversion.convertCurrency(amount, "Won Sur Coreanos", krwToBalboa, "Balboas", "B/.");
                 break;
         }
     }

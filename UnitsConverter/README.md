@@ -1,18 +1,16 @@
-## Getting Started
+## Conversor de Unidades 
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este proyecto es parte del challanger de ONE Oracle Next Education 
 
-## Folder Structure
+## Estructura de carpetas
 
-The workspace contains two folders by default, where:
+El espacio de trabajo contiene dos carpetas por defecto, donde:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- `UnitsConverter`: folder principal y dentro del mismo se encunetra el proyecto completo.
+- `.vscode`: ajuste de vscode que fue el editor que utilize para el proyecto.
+- `src`: Carpeta donde esta los arcrivos y codigo de la APP.
+- `README`: README sobre el proyecto 
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Mientras tanto, los archivos de salida compilados se generarán en la carpeta `bin` por defecto.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+> Si desea personalizar la estructura de carpetas, abra `.vscode/settings.json` y actualice allí los ajustes relacionados.
